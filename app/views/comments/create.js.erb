@@ -1,0 +1,2 @@
+$("#create-comment-<%@post.id %>").html("<%= j render(partial: 'comments/add') %>");
+$("#post-<%=@post.id%>-comments").prepend("<%= j render(@comment) %>")

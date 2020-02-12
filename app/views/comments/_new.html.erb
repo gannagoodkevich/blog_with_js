@@ -1,0 +1,13 @@
+<%= form_with model: comment, url: post_comments_path, remote: true do |form| %>
+  <p>
+    <%= form.text_area :content%>
+  </p>
+
+  <div class="row">
+    <div class="col-sm-11">
+      <p>
+        <%= form.submit class: "btn btn-primary"%>
+      </p>
+    </div>
+  </div>
+<% end %>
