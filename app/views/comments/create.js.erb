@@ -1,2 +1,7 @@
 $("#create-comment-<%=@post.id %>").html("<%= j render(partial: 'comments/add', locals: {post: @post}) %>");
 $("#post-<%=@post.id%>-comments").append("<%= j render(@comment) %>")
+$("comment-<%=@comment.id %>").append("<%= j render(@comment) %>")
+document.getElementById("comment-<%=@comment.id %>").classList.add("border-primary")
+setTimeout(function(){
+    document.getElementById("comment-<%=@comment.id %>").classList.remove("border-primary")
+}, 5000);
