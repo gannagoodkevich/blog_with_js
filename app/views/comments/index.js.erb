@@ -1,2 +1,1 @@
 $("#post-<%=@post.id%>-comments").html("<%= j render(partial: 'comment', collection: @comments) %>");
-$("#post-<%=@post.id%>-comments").append("<%= j render(partial: 'add') %>");

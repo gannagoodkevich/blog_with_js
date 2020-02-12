@@ -1,2 +1,2 @@
-$("#create-comment-<%@post.id %>").html("<%= j render(partial: 'comments/add') %>");
-$("#post-<%=@post.id%>-comments").prepend("<%= j render(@comment) %>")
+$("#create-comment-<%=@post.id %>").html("<%= j render(partial: 'comments/add', locals: {post: @post}) %>");
+$("#post-<%=@post.id%>-comments").append("<%= j render(@comment) %>")
